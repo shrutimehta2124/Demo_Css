@@ -1,0 +1,745 @@
+*{
+  font-family: Inter;
+  margin: 0%;
+  padding: 0%;
+  border: border-box;
+}
+header {
+  max-width: 100%;
+  height: auto;
+  display: flex; /* Use Flexbox to arrange items in a row */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between logo and menu */
+  padding: 0.625em 1.25em;
+  position: relative;
+}
+
+.logo {
+  display: flex; /* Ensure logo container is flexible */
+  align-items: center; /* Vertically center the logo */
+  justify-content: flex-start; /* Align the logo to the left */
+}
+
+.logo img {
+  max-width: 100%; /* Allow the image to scale */
+  height: auto;
+  opacity: 1; /* Make sure the logo is visible */
+  margin-left: 80px; /* Adjust logo position */
+}
+
+menu {
+  display: flex; /* Use Flexbox for menu items */
+    justify-content: space-evenly; /* Distribute menu items evenly with equal gaps */
+    gap: 50px;
+    width: 50%; /* Control the width of the menu container */
+}
+
+.navbar {
+  list-style-type: none; /* Remove bullets from list */
+  display: flex; /* Arrange menu items in a row */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.navbar > li {
+  display: inline-flex; /* Use flex for better control */
+  font-size: 1.3rem;
+  position: relative;
+  margin-right: 30px; /* Space between list items */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #007BFF; /* Hover effect */
+}
+
+.navtoggle svg {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.navtoggle {
+  display: none; /* Hidden by default, only shown for small screens */
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  cursor: pointer;
+}
+/* General layout of container */
+.container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  max-width: 100%; /* Ensure container takes up full width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Left side content */
+.left-content {
+  flex: 1 1 45%; /* Flex grow, shrink, and basis */
+  padding: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.heading {
+  width: 100%;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.heading h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: #232323;
+  font-family: Inter, sans-serif;
+  text-align: left;
+  max-width: 100%; /* Ensure the heading is responsive */
+  height: auto;
+}
+
+.heading p {
+  font-size: 24px;
+  color: #50506A;
+  text-align: left;
+  margin: 0;
+  font-family: Inter, sans-serif;
+  max-width: 100%; /* Ensure paragraph text fits within container */
+  height: auto;
+}
+
+/* Image container for download buttons */
+.img-container {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-container img {
+  max-width: 100%;
+  height: auto;
+  padding: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.img-container img:hover {
+  background-color: #9FA5C0;
+}
+
+/* Right side content */
+.right-content {
+  flex: 1 1 45%; /* Flex grow, shrink, and basis */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 2rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.right-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+  animation: filterChange 60s infinite ease-in-out;
+  margin-top: 2rem;
+}
+
+/* Animation for image */
+@keyframes filterChange {
+  0% {
+      filter: grayscale(0%) brightness(1) contrast(100%);
+  }
+  20% {
+      filter: grayscale(100%) brightness(0.7) contrast(120%);
+  }
+  35% {
+      filter: grayscale(0%) brightness(1) contrast(100%);
+  }
+}
+
+/* Container for the scrolling images */
+.scrolling-images {
+  width: 100%; /* Ensure the container takes up the full width */
+  overflow: hidden; /* Hide the content that overflows */
+  position: relative;
+  margin-top: 1rem; /* Space at the top */
+}
+
+/* Wrapper for images to allow scrolling animation */
+.images-container {
+  display: flex; /* Align images side by side */
+  justify-content: flex-start; /* Align images to the left */
+  animation: scrollImage 45s linear infinite; /* Scroll images infinitely */
+}
+
+/* Style for each image */
+.scrolling-images img {
+  height: 60px; /* Set the height of the images */
+  width: auto; /* Ensure the images maintain their aspect ratio */
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+/* Animation to scroll images */
+@keyframes scrollImage {
+  0% {
+      transform: translateX(0); /* Start the images at their original position */
+  }
+  100% {
+      transform: translateX(-50%); /* Move both images to the left */
+  }
+}
+/*new section*/
+.features-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 1rem;
+  padding: 2rem;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.features-header h2 {
+  font-size: 3rem;
+}
+
+.features-header h4 {
+  font-size: 1.2rem;
+  color: #50506A;
+  font-weight: normal;
+  margin-top: 0.5rem;
+}
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Image takes up 1/3 and content takes 2/3 */
+  gap: 2rem;  /* Add space between image and content */
+  max-width: 100%;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+}
+
+.feature-image {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  animation: invertChange 2s infinite;
+}
+
+@keyframes invertChange {
+  0% {
+      filter: invert(0); /* No inversion */
+  }
+  10% {
+      filter: invert(100%); /* Fully inverted image */
+  }
+  15% {
+      filter: invert(0); /* Back to normal */
+  }
+}
+
+.content-column {
+  display: grid;
+  gap: 2rem; /* Space between items */
+}
+
+/* Content Item Styling */
+.content-item {
+  display: grid;
+  grid-template-columns: 3rem 1fr; /* Icon and text in two columns */
+  gap: 1rem;
+  align-items: center;
+  opacity: 1; /* Ensuring it is visible */
+  transform: translateY(0); /* No initial transform */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Optional: Animation when the content items come into view (e.g., with JavaScript or a library like AOS) */
+.content-item.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move back to normal position */
+}
+
+.icon-container {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.text-content h4 {
+  font-size: 2rem;
+  color: #161639;
+  text-align: left;
+  margin: 0;
+}
+
+.text-content p {
+  font-size: 1.25rem;
+  color: #555;
+  text-align: left;
+  margin: 0.25rem 0;
+}
+
+/* Main blue section */
+.blue-section {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #4F7EF7; /* Blue background for the whole section */
+  width: 100%; /* Full width to make it responsive */
+  height: auto; /* Height auto to adjust based on content */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 24px;
+  color: white; /* Text color */
+  box-sizing: border-box; /* Ensure padding doesn't break the layout */
+  justify-content: space-between; /* Spread out the left and right sections */
+  gap: 20px; /* Add some gap between left and right sections */
+}
+
+/* Left side with background image */
+.left {
+  flex: 1; /* Takes up equal space as the right section */
+  background-image: url('images/line-background.png'); /* Set your background image */
+  background-size: cover; /* Ensure the image covers the whole div */
+  background-position: center; /* Center the image */
+  height: auto; /* Auto adjust the height */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: flex-start; /* Align items to the top */
+  position: relative; /* Allow positioning of child elements */
+}
+
+/* Styling for the image inside the left div */
+.left img {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensures no extra space below the image */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease;
+  position: relative; /* Allow positioning of the image */
+  top: -90px; /* Slightly adjust image upwards without overflowing */
+}
+
+/* Hover effect on image */
+.left img:hover {
+  transform: rotate(20deg); /* Rotate the image on hover */
+}
+
+/* Right side for text content */
+.right {
+  flex: 1; /* Takes up equal space as the left section */
+  display: flex;
+  flex-direction: column; /* Stack text and button vertically */
+  justify-content: flex-start; /* Align to the top */
+  padding-left: 20px; /* Space between the left and right sections */
+  align-items: center;
+  
+  box-sizing: border-box; /* Ensure padding is accounted for */
+}
+
+/* Heading for the discount offer */
+.right h3 {
+  font-family: Inter, sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  text-align: left;
+  padding: 20px;
+  margin: 50px 0 20px 0; /* Remove top margin and set a small bottom margin */
+  max-width: 100%; /* Ensure heading doesn't overflow the container */
+  word-wrap: break-word; /* Break words to prevent overflow */
+}
+
+/* Paragraph for the offer details */
+.right p {
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 20px; /* Space below the paragraph */
+  position: relative; /* Allow positioning of the paragraph */
+  max-width: 100%; /* Ensure paragraph stays within bounds */
+}
+
+/* Button styles */
+.right button {
+  padding: 12px 24px; /* Adjust padding for a more clickable button */
+  margin-top: 20px; /* Add some space between paragraph and button */
+  width: 100%; /* Button width adjusts based on content */
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #FFFFFF; /* White background for the button */
+  color: #4F7EF7; /* Blue text */
+  border: none; /* Remove default button border */
+  align-self: left; /* Align the button to the left */
+}
+
+/* Button hover effect */
+.right button:hover {
+  background-color: lightgray; /* Button color on hover */
+}
+
+
+/*new section started*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 items per row */
+  gap: 20px;  /* Space between items */
+  margin-top: 30px;
+  margin: 30px 30px 0 30px;
+}
+.item {
+  background-color: #4F7EF712;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;  /* Ensure the item takes full available width */
+  height: 100%; /* Allow the height to adjust based on content */
+  padding: 20px;
+  border-radius: 24px;
+  text-align: center;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.item svg {
+  width: 40.18px;
+  height: 43px;
+  top: 2.5px;
+}
+
+.item h3 {
+  
+  width: 100%;  /* Ensure heading spans full width */
+  height: auto; /* Adjust height automatically */
+  margin-top: 10px;
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: left;
+}
+
+p {
+  margin-top: 15px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: left;
+  margin-left: 1px;
+  width: 100%;
+  height: auto; /* Adjust height automatically */
+}
+
+/* New section started */
+.main-container {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;  /* Allow elements to wrap */
+  justify-content: space-between;  /* Distribute space evenly between items */
+  align-items: center;  /* Vertically align items */
+  margin-top: 55px;
+  background-color: #4F7EF712;
+  padding: 40px;
+}
+
+.leftside-content,
+.rightside-content {
+  flex: 1; /* Allow each container to grow */
+  max-width: 100%;
+  height: auto;
+}
+
+.leftside-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;  /* Align content to the left */
+  gap: 24px;
+}
+
+.txt-content h2 {
+  text-align: left;
+  font-family: Inter;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 72px;
+  margin-left: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+.txt-content p {
+  text-align: left;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-left: 100px;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-content {
+  display: flex;
+  max-width: 100%;
+  gap: 20px;
+}
+
+.img-content img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 100px;
+  margin-top: 40px;
+  border-radius: 8px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.rightside-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+}
+
+.rightside-content img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  opacity: 1;
+  animation: opacityChange 60s infinite;
+}
+
+@keyframes opacityChange {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+}
+/*new section */
+footer {
+  background-color: #161639;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of child elements on smaller screens */
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.footer-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  gap: 20px;
+}
+
+.footer-logo img {
+  width: 179.08px;
+  height: 33px;
+  color: #FFFFFF;
+}
+
+.footer-copyright p {
+  color: white;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.footer-img {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.footer-img img {
+  width: 134px;
+  height: 48px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.footer-center-contain {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 50%;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-1, .footer-2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-1 h4, .footer-2 h4 {
+  color: #FFFFFF;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+}
+
+.footer-center-contain ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-center-contain ul li {
+  margin-top: 10px;
+}
+
+.footer-center-contain ul li a {
+  color: #9FA5C0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-center-contain ul li a:hover {
+  color: #f9c74f;
+}
+
+.updated-section {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff3b;
+}
+
+.input-wrapper svg {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+/*new section */
+  .more-feature-contain {
+    display: flex;
+    padding: 1rem;
+    gap:2rem;
+    justify-content: space-between;
+    width: 100%; /* Ensures it takes up full container width */
+  }
+
+  .contained-on-left-side, .contained-on-right-side {
+    flex: 1; /* Ensures both containers take equal space */
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 2rem;
+  }
+
+  .content-item-feature {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start; /* Align items vertically at the top */
+    gap:1rem; /* Adds space between the icon and the text */
+  }
+  .icon-container svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .feature-icon-container {
+    display: inline-block;
+    width: 3rem;
+  height: 3rem;
+  }
+
+  .text-content-feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:1rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+    margin: 0.25rem 0;
+  }
+
+  p {
+    font-size: 1.25rem;
+  text-align: left;
+  margin: 0.25rem 0;
+  }
+  .feature-image-1 {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    animation: invertChange 2s infinite;
+  }
