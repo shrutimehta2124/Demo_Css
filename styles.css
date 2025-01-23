@@ -2,11 +2,9 @@
   font-family: Inter;
   margin: 0%;
   padding: 0%;
-  border: border-box;
 }
 header {
-  max-width: 100%;
-  height: auto;
+  
   display: flex; /* Use Flexbox to arrange items in a row */
   align-items: center; /* Vertically center items */
   justify-content: space-between; /* Space between logo and menu */
@@ -44,7 +42,6 @@ menu {
 .navbar > li {
   display: inline-flex; /* Use flex for better control */
   font-size: 1.3rem;
-  position: relative;
   margin-right: 30px; /* Space between list items */
 }
 
@@ -59,18 +56,25 @@ menu {
   color: #007BFF; /* Hover effect */
 }
 
+.navtoggle  {
+ display: none;
+ cursor: pointer;
+}
 .navtoggle svg {
-  max-width: 100%;
-  height: auto;
-  display: flex;
+ max-width: 100%;
+ height: auto;
+ display: flex;
 }
 
-.navtoggle {
-  display: none; /* Hidden by default, only shown for small screens */
-  position: absolute;
-  top: 50px;
-  right: 20px;
-  cursor: pointer;
+.dropbtn::after {
+  content: '';
+  border: solid #000; /* Arrow color */
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 1px;
+  transform: rotate(45deg);
+  margin-left: 5px; /* Space between text and arrow */
+  vertical-align: middle;
 }
 /* General layout of container */
 .container1 {
@@ -79,7 +83,6 @@ menu {
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-  max-width: 100%; /* Ensure container takes up full width */
   margin: 0 auto; /* Center the container */
 }
 
@@ -149,8 +152,7 @@ menu {
   align-items: center;
   padding: 1rem;
   margin-left: 2rem;
-  max-width: 100%;
-  height: auto;
+  
 }
 
 .right-content img {
@@ -320,17 +322,14 @@ menu {
 /* Main blue section */
 .blue-section {
   display: flex;
-  margin-top: 10px;
-  margin-left: 50px;
-  margin-right: 50px;
+  flex-wrap: wrap;
+  margin: 0 20px 10px 10px;
   background-color: #4F7EF7; /* Blue background for the whole section */
-  width: 100%; /* Full width to make it responsive */
   height: auto; /* Height auto to adjust based on content */
-  padding: 20px; /* Add padding for spacing */
   border-radius: 24px;
   color: white; /* Text color */
-  box-sizing: border-box; /* Ensure padding doesn't break the layout */
   justify-content: space-between; /* Spread out the left and right sections */
+  box-sizing: border-box; /* Include padding and borders in the element's width and height */
   gap: 20px; /* Add some gap between left and right sections */
 }
 
@@ -344,6 +343,7 @@ menu {
   display: flex;
   justify-content: center; /* Center the image horizontally */
   align-items: flex-start; /* Align items to the top */
+  max-width: 100%;
   position: relative; /* Allow positioning of child elements */
 }
 
@@ -369,10 +369,8 @@ menu {
   display: flex;
   flex-direction: column; /* Stack text and button vertically */
   justify-content: flex-start; /* Align to the top */
-  padding-left: 20px; /* Space between the left and right sections */
   align-items: center;
-  
-  box-sizing: border-box; /* Ensure padding is accounted for */
+  box-sizing: border-box; 
 }
 
 /* Heading for the discount offer */
@@ -380,10 +378,9 @@ menu {
   font-family: Inter, sans-serif;
   font-size: 48px;
   font-weight: 600;
-  text-align: left;
+  left: -30px;
   padding: 20px;
   margin: 50px 0 20px 0; /* Remove top margin and set a small bottom margin */
-  max-width: 100%; /* Ensure heading doesn't overflow the container */
   word-wrap: break-word; /* Break words to prevent overflow */
 }
 
@@ -391,25 +388,22 @@ menu {
 .right p {
   font-family: Inter, sans-serif;
   font-size: 24px;
-  font-weight: 500;
-  line-height: 32px;
+  left: -30px;
   text-align: left;
   margin-bottom: 20px; /* Space below the paragraph */
   position: relative; /* Allow positioning of the paragraph */
-  max-width: 100%; /* Ensure paragraph stays within bounds */
 }
 
 /* Button styles */
 .right button {
   padding: 12px 24px; /* Adjust padding for a more clickable button */
   margin-top: 20px; /* Add some space between paragraph and button */
-  width: 100%; /* Button width adjusts based on content */
   border-radius: 5px;
   cursor: pointer;
+  max-width: 100%;
   background-color: #FFFFFF; /* White background for the button */
   color: #4F7EF7; /* Blue text */
   border: none; /* Remove default button border */
-  align-self: left; /* Align the button to the left */
 }
 
 /* Button hover effect */
@@ -430,8 +424,6 @@ menu {
   background-color: #4F7EF712;
   display: flex;
   flex-direction: column;
-  max-width: 100%;  /* Ensure the item takes full available width */
-  height: 100%; /* Allow the height to adjust based on content */
   padding: 20px;
   border-radius: 24px;
   text-align: center;
@@ -446,9 +438,6 @@ menu {
 }
 
 .item h3 {
-  
-  width: 100%;  /* Ensure heading spans full width */
-  height: auto; /* Adjust height automatically */
   margin-top: 10px;
   font-family: Inter;
   font-size: 30px;
@@ -471,21 +460,17 @@ p {
 
 /* New section started */
 .main-container {
-  max-width: 100%;
-  height: auto;
+  margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;  /* Allow elements to wrap */
   justify-content: space-between;  /* Distribute space evenly between items */
   align-items: center;  /* Vertically align items */
-  margin-top: 55px;
   background-color: #4F7EF712;
-  padding: 40px;
 }
 
 .leftside-content,
 .rightside-content {
   flex: 1; /* Allow each container to grow */
-  max-width: 100%;
   height: auto;
 }
 
@@ -504,7 +489,6 @@ p {
   font-weight: 700;
   line-height: 72px;
   margin-left: 100px;
-  max-width: 100%;
   height: auto;
 }
 
@@ -569,7 +553,7 @@ footer {
   flex-wrap: wrap; /* Allow wrapping of child elements on smaller screens */
   justify-content: space-between;
   align-items: flex-start;
-  max-width: 100%;
+  
   height: auto;
 }
 
@@ -669,13 +653,14 @@ footer {
 }
 
 input[type="text"] {
-  width: 100%;
   padding: 10px 10px 10px 40px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  color: white;
+  border: 1px solid red;
   border-radius: 4px;
   background-color: #ffffff3b;
 }
+
 
 .input-wrapper svg {
   position: absolute;
@@ -690,7 +675,6 @@ input[type="text"] {
     padding: 1rem;
     gap:2rem;
     justify-content: space-between;
-    width: 100%; /* Ensures it takes up full container width */
   }
 
   .contained-on-left-side, .contained-on-right-side {
