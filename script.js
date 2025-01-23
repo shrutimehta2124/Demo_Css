@@ -1,6 +1,13 @@
 function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
+  const navbar = document.getElementById('navbar');
+  navbar.classList.toggle('active');
+  const navtoggle = document.querySelector('.navtoggle svg');
+  
+  if (navbar.classList.contains('active')) {
+    navtoggle.style.transform = 'rotate(180deg)'; // Rotate the icon when menu is open
+  } else {
+    navtoggle.style.transform = 'rotate(0deg)'; // Reset the icon when menu is closed
+  }
 }
 
   window.addEventListener('scroll', () => {
