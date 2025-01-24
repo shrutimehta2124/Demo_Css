@@ -9,35 +9,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> 
-     <script src="script.js" defer></script>
+     <script src="script.js" ></script>
+     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles_1.css"> 
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="images/Logo.png" alt="Logo">
+        <img src="images/Logo.png" alt="Logo">
     </div>
-    <nav class="menu">
-      <ul id="navbar" class="navbar">
-        <li><a href="#How it Works">How it Works</a></li>
-        <li class="dropdown">
-          <a href="#Download" class="dropbtn">Download</a>
-          <ul class="dropdown-content"></ul>
-        </li>
-        <li class="dropdown">
-          <a href="#Resource" class="dropbtn">Resource</a>
-          <ul class="dropdown-content"></ul>
-        </li>
-        <li><a href="#About Us">About Us</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
-      <div class="navtoggle" onclick="toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-          <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
-        </svg>
-      </div>
+    <div class="hamburger" onclick="toggleNavbar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#How it Works">How it Works</a></li>
+            <li class="dropdown">
+                <a href="#Download">Download
+                    <svg width="16" height="12" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0834 5.16675L7.00004 9.42762L2.91671 5.16675" stroke="#161639" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a href="#Resource">Resources
+                    <svg width="16" height="12" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.0834 5.16675L7.00004 9.42762L2.91671 5.16675" stroke="#161639" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </li>
+            <li><a href="#About Us">About Us</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
+
 
 <section>
   <div class="container1">
@@ -132,9 +140,9 @@
     <section>
       <div class="more-feature-contain">
         <div class="contained-on-left-side">
-            <div class="main-div">
-              <div class="content-item-feature">
-                <span class="feature-icon-container">         
+            <div class="content-column">
+              <div class="content-item">
+                <span class="icon-container">         
                   <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M31.3855 18.1713C31.4566 17.346 32.1833 16.7345 33.0087 16.8055C36.8326 17.1348 39.8275 18.3107 41.8148 20.7599C43.7685 23.1677 44.52 26.5327 44.52 30.72V30.98C44.52 35.5984 43.6044 39.2219 41.1732 41.6532C38.7419 44.0844 35.1183 45 30.5 45H17.48C12.8616 45 9.23809 44.0844 6.80683 41.6532C4.37557 39.2219 3.45999 35.5984 3.45999 30.98V30.72C3.45999 26.5631 4.2014 23.2183 6.12369 20.8155C8.08066 18.3693 11.0319 17.1778 14.8008 16.8265C15.6256 16.7496 16.3566 17.3559 16.4335 18.1808C16.5104 19.0056 15.9041 19.7366 15.0792 19.8135C11.7681 20.1222 9.72933 21.1108 8.46629 22.6896C7.16858 24.3117 6.45999 26.8369 6.45999 30.72V30.98C6.45999 35.3017 7.33442 37.9381 8.92815 39.5319C10.5219 41.1256 13.1583 42 17.48 42H30.5C34.8216 42 37.4581 41.1256 39.0518 39.5319C40.6456 37.9381 41.52 35.3017 41.52 30.98V30.72C41.52 26.8074 40.8015 24.2724 39.4852 22.6501C38.2025 21.0693 36.1274 20.0852 32.7513 19.7945C31.9259 19.7234 31.3145 18.9967 31.3855 18.1713Z" fill="#4F7EF7"/>
                       <g opacity="0.4">
@@ -143,13 +151,13 @@
                       </g>
                       </svg>
                 </span>
-                <div class="text-content-feature">
+                <div class="text-content">
                   <h4>Export Data</h4>
                   <p>Easy to make reports by exporting data in pdf and CSV format</p>
                 </div>
               </div>
-              <div class="content-item-feature">
-                <span class="feature-icon-container">  
+              <div class="content-item">
+                <span class="icon-container">  
                   <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M23.24 18.26C23.24 17.4316 23.9116 16.76 24.74 16.76H35.24C36.0684 16.76 36.74 17.4316 36.74 18.26C36.74 19.0884 36.0684 19.76 35.24 19.76H24.74C23.9116 19.76 23.24 19.0884 23.24 18.26Z" fill="#4F7EF7"/>
                       <path opacity="0.4" fill-rule="evenodd" clip-rule="evenodd" d="M19.8207 14.1993C20.4065 14.7851 20.4065 15.7349 19.8207 16.3207L15.3207 20.8207C14.7349 21.4065 13.7851 21.4065 13.1993 20.8207L11.6993 19.3207C11.1136 18.7349 11.1136 17.7851 11.6993 17.1993C12.2851 16.6136 13.2349 16.6136 13.8207 17.1993L14.26 17.6387L17.6993 14.1993C18.2851 13.6136 19.2349 13.6136 19.8207 14.1993Z" fill="#4F7EF7"/>
@@ -158,13 +166,13 @@
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M6.18934 6.68934C8.85828 4.0204 12.8521 3 18 3H30C35.1479 3 39.1417 4.0204 41.8107 6.68934C44.4796 9.35828 45.5 13.3521 45.5 18.5V30.5C45.5 35.6479 44.4796 39.6417 41.8107 42.3107C39.1417 44.9796 35.1479 46 30 46H18C12.8521 46 8.85828 44.9796 6.18934 42.3107C3.5204 39.6417 2.5 35.6479 2.5 30.5V18.5C2.5 13.3521 3.5204 9.35828 6.18934 6.68934ZM8.31066 8.81066C6.4796 10.6417 5.5 13.6479 5.5 18.5V30.5C5.5 35.3521 6.4796 38.3583 8.31066 40.1893C10.1417 42.0204 13.1479 43 18 43H30C34.8521 43 37.8583 42.0204 39.6893 40.1893C41.5204 38.3583 42.5 35.3521 42.5 30.5V18.5C42.5 13.6479 41.5204 10.6417 39.6893 8.81066C37.8583 6.9796 34.8521 6 30 6H18C13.1479 6 10.1417 6.9796 8.31066 8.81066Z" fill="#4F7EF7"/>
                       </svg>
                 </span>
-                <div class="text-content-feature">
+                <div class="text-content">
                   <h4>Manage Task</h4>
                   <p>Manage tasks you can assign employees with reminders on tasks</p>
                 </div>
               </div>
-              <div class="content-item-feature">
-                <span class="feature-icon-container">  
+              <div class="content-item">
+                <span class="icon-container">  
                       <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26707 6.47936C6.26498 7.08953 5.43945 8.42135 5.43945 10.6807V40.3607C5.43945 41.7844 6.63974 43.0007 8.15945 43.0007H23.4995V15.3207C23.4995 14.6095 23.2239 13.7285 22.7005 12.898C22.1776 12.0684 21.4952 11.4287 20.8399 11.1079L11.9599 6.74791C11.9597 6.74782 11.9601 6.748 11.9599 6.74791C9.87975 5.72974 8.27643 5.86476 7.26707 6.47936ZM5.70684 3.917C7.84239 2.61665 10.5794 2.73191 13.279 4.05345L22.159 8.41347C22.1588 8.41338 22.1592 8.41357 22.159 8.41347C23.4235 9.0327 24.4914 10.1131 25.2384 11.2984C25.985 12.4829 26.4995 13.9119 26.4995 15.3207V44.5007C26.4995 45.3291 25.8279 46.0007 24.9995 46.0007H8.15945C5.03917 46.0007 2.43945 43.497 2.43945 40.3607V10.6807C2.43945 7.70001 3.56393 5.22182 5.70684 3.917Z" fill="#4F7EF7"/>
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0556 20.1749C24.4074 19.8901 24.8689 19.7794 25.3116 19.8736L26.268 20.077L35.2641 22.0963L35.2679 22.0971L39.3213 22.9957C39.3208 22.9955 39.3218 22.9958 39.3213 22.9957C40.7742 23.315 42.2961 23.8886 43.4696 25.072C44.6622 26.2748 45.3329 27.9396 45.4159 30.112C45.44 30.3129 45.4397 30.4928 45.4395 30.5963C45.4395 30.605 45.4394 30.6131 45.4394 30.6207V38.1807C45.4394 40.5429 44.8948 42.5867 43.4601 44.0214C42.0255 45.456 39.9816 46.0007 37.6194 46.0007H24.9995C24.171 46.0007 23.4995 45.3291 23.4995 44.5007V21.3407C23.4995 20.8881 23.7038 20.4597 24.0556 20.1749ZM26.4995 23.2037L34.611 25.0243L34.6148 25.0252L38.6748 25.9252L38.6776 25.9258C39.8642 26.1865 40.7432 26.5832 41.3393 27.1844C41.9017 27.7516 42.3693 28.66 42.4202 30.2876C42.4221 30.3501 42.428 30.4124 42.4377 30.4741C42.4378 30.4763 42.438 30.4793 42.4381 30.4832C42.4386 30.4942 42.439 30.5099 42.4392 30.5334L42.4394 30.6207V38.1807C42.4394 40.1386 41.9841 41.2547 41.3388 41.9001C40.6934 42.5454 39.5773 43.0007 37.6194 43.0007H26.4995V23.2037Z" fill="#4F7EF7"/>
@@ -174,7 +182,7 @@
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M34.0006 22.3909C34.3553 22.1062 34.82 21.9978 35.2641 22.0962L39.3213 22.9956C39.3218 22.9957 39.3223 22.9958 39.3227 22.9959C40.7757 23.3153 42.2961 23.8886 43.4696 25.072C44.6772 26.2898 45.3496 27.9813 45.4187 30.1938C45.42 30.2348 45.4196 30.2759 45.4175 30.3169C45.2574 33.4659 42.647 36.0007 39.4395 36.0007C36.131 36.0007 33.4395 33.3091 33.4395 30.0007V23.5607C33.4395 23.1058 33.6458 22.6756 34.0006 22.3909ZM36.4395 25.4296V30.0007C36.4395 31.6523 37.7879 33.0007 39.4395 33.0007C41.0124 33.0007 42.3094 31.7663 42.4179 30.2221C42.3567 28.6356 41.8942 27.7439 41.3393 27.1844C40.7432 26.5832 39.8642 26.1864 38.6776 25.9257L38.6748 25.9251L38.6748 25.9251L36.4395 25.4296Z" fill="#4F7EF7"/>
                           </svg>
                 </span>
-                <div class="text-content-feature">
+                <div class="text-content">
                   <h4>Find a Business</h4>
                   <p>Find storage unit services around you that you can rent at any time</p>
                 </div>

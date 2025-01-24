@@ -1,14 +1,9 @@
-function toggleMenu() {
-  const navbar = document.getElementById('navbar');
-  navbar.classList.toggle('active');
-  const navtoggle = document.querySelector('.navtoggle svg');
-  
-  if (navbar.classList.contains('active')) {
-    navtoggle.style.transform = 'rotate(180deg)'; // Rotate the icon when menu is open
-  } else {
-    navtoggle.style.transform = 'rotate(0deg)'; // Reset the icon when menu is closed
-  }
+// Function to toggle the visibility of the navbar
+function toggleNavbar() {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('active'); // Toggles the display of the navbar
 }
+
 
   window.addEventListener('scroll', () => {
     const items = document.querySelectorAll('.content-item');
