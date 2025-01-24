@@ -194,10 +194,10 @@ header {
   0% {
       filter: grayscale(0%) brightness(1) contrast(100%);
   }
-  20% {
+  10% {
       filter: grayscale(100%) brightness(0.7) contrast(120%);
   }
-  35% {
+  15% {
       filter: grayscale(0%) brightness(1) contrast(100%);
   }
 }
