@@ -54,7 +54,7 @@
     }
 
     .img-container {
-        justify-content: center;
+        justify-content: left;
     }
 
     .right-content {
@@ -112,7 +112,7 @@
         
           .text-content p {
             font-size: 0.9rem;
-            text-align: center;
+            text-align: left;
           }
         
           /* Adjusting image responsiveness */
@@ -146,46 +146,38 @@
           }
         
           h4 {
-            font-size: 1.75rem;
+            font-size: 1.55rem;
           }
         
           p {
-            font-size: 1.1rem;
+            font-size: 1rem;
           }
           /*Blue Div Section Start*/
           .blue-section {
-            margin-left: 30px;
-            flex-direction: column; /* Stack the left and right sections vertically */
+            flex-direction: column; /* Stack sections vertically */
             gap: 15px;
+            margin: 0 10px; /* Ensure no overflow by adjusting margins */
+            padding: 0 10px; /* Reduce padding to ensure no overflow */
           }
         
-          .left, .right {
-            flex: none; /* Let both sections take up full width */
-            width: 100%; /* Full width for each section */
-            padding: 0; /* Remove padding */
+          .left img {
+            max-width: 100%; /* Image adjusts to container width */
+            height: auto;
           }
         
-          /* Heading for smaller screens */
           .right h3 {
-            font-size: 46px; /* Smaller font size for the heading */
-            margin-top: 20px;
-           
+            font-size: 36px;
           }
         
           .right p {
-            font-size: 25px; /* Smaller font size for the paragraph */
+            font-size: 18px;
+            margin: 0 10px 20px;
+            padding: 0;
           }
         
           .right button {
-            font-size: 20px; /* Adjust button font size */
-            width: 100%;
-          }
-        
-          /* Adjust image for smaller screens */
-          .left img {
-            top: 50; /* Remove the upward shift on smaller screens */
-            max-width: 100%;
-            height: auto;
+            padding: 8px 16px; /* Smaller padding for mobile */
+            max-width: 100%; /* Ensure button doesn’t overflow */
           }
           /*(new section)4 div */
           .container {
@@ -407,28 +399,32 @@
           }
           /*blue Section Div*/
           .blue-section {
-           margin-left: 30px;
-            padding: 15px; /* Adjust padding for smaller screens */
-          }
-        
-          .right h3 {
-            font-size: 40px; /* Smaller font size */
-          }
-        
-          .right p {
-            font-size: 20px; /* Even smaller font size */
-          }
-        
-          .right button {
-            font-size: 20px;
-            width: 100%;
+            flex-direction: column;
+            gap: 10px;
+            margin: 0 10px;
+            padding: 0 10px; /* Adjust padding to ensure content fits */
           }
         
           .left img {
-            width: 80%; /* Ensure the image takes full width */
+            max-width: 100%;
             height: auto;
-            top: 10;
           }
+        
+          .right h3 {
+            font-size: 32px;
+          }
+        
+          .right p {
+            font-size: 16px;
+            margin: 0 10px 15px;
+            padding: 0;
+          }
+        
+          .right button {
+            padding: 6px 12px;
+            max-width: 100%;
+          }
+         
           /*new section(4div)*/
           .container {
             grid-template-columns: 1fr;  /* 1 item per row */
@@ -630,27 +626,33 @@
                 font-size: 0.9rem;
               }
               /*Blue Section Div */
-              .blue-section{
-                padding: 10px;
-                margin-top: 50px;
-                margin-left: 30px;
+              .blue-section {
+                margin: 0 10px;
+                flex-direction: column;
+                gap: 10px;
+                padding: 0 5px; /* Reduced padding to avoid overflow */
               }
-              .right h3{
+            
+              .left img {
+                max-width: 100%;
+                height: auto;
+              }
+            
+              .right h3 {
                 font-size: 28px;
               }
-              .right p{
-                font-size: 16px;
-              }
-              .right button{
+            
+              .right p {
                 font-size: 14px;
-                width: 100%;
-                padding: 10px 20px;
+                margin: 0 10px 15px;
+                padding: 0;
               }
-              .left img{
-                width: 100%;
-                
-                height: auto;
-                top: 100;
+            
+              .right button {
+                padding: 5px 10px;
+                font-size: 14px;
+                width: auto; /* Avoid stretching button too wide */
+                max-width: 100%; /* Ensure it doesn't overflow */
               }
               /*new section(4div)*/
               .container {
