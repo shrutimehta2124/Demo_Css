@@ -8,102 +8,100 @@ body{
   height: auto;
   box-sizing: border-box;
 }
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1em 2em; /* Increased padding for spacing */
-  position: relative;
-  gap: 20px; /* Adds space between logo and navbar */
-}
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em; /* Increased padding for spacing */
+    position: relative;
+    gap: 20px; /* Adds space between logo and navbar */
+  }
 
-/* Logo Styling */
-.logo {
-  display: flex;
-  align-items: center;
-  margin-right: 20px; /* Adds space between logo and other items */
-}
+  /* Logo Styling */
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Adds space between logo and other items */
+  }
 
-.logo img {
-  max-width: 100%;
-  height: auto;
-  opacity: 1;
-  margin-right: 20px; /* Adds space to the right of the logo */
-}
+  .logo img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px; /* Adds space to the right of the logo */
+  }
 
-/* Hamburger Styling (3 lines) */
-.hamburger {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-  cursor: pointer;
-  gap: 5px; /* Adds space between hamburger lines */
-}
+  /* Hamburger Styling (3 lines) */
+  .hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    gap: 5px; /* Adds space between hamburger lines */
+  }
 
-.hamburger span {
-  width: 30px;
-  height: 4px;
-  background-color: #000;
-  border-radius: 5px;
-}
+  .hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #000;
+    border-radius: 5px;
+  }
 
-/* Navbar Styling */
-.navbar {
-  display: flex;
-  justify-content: space-evenly;
-  gap: 20px; /* Adds space between navbar items */
-}
+  /* Navbar Styling */
+  .navbar {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: 30px; /* Adds space between navbar items */
+  }
 
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 30px; /* Adds space between navbar items */
-}
+  .navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+  }
 
-.navbar > li {
-  display: inline-flex;
-  font-size: 1.3rem;
-}
+  .navbar > li {
+  
+    font-size: 1.3rem;
+  }
 
-.navbar a {
-  text-decoration: none;
-  color: black;
-  font-size: 1.3rem;
-  padding: 5px 10px; /* Adds space around text in links */
-  transition: color 0.3s ease;
-}
+  .navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    padding: 5px 10px; /* Adds space around text in links */
+    transition: color 0.3s ease;
+  }
 
-.navbar a:hover {
-  color: #007BFF;
-}
+  .navbar a:hover {
+    color: #007BFF;
+  }
 
-/* Dropdown Arrow */
-.dropbtn::after {
-  content: '';
-  border: solid #000;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 1px;
-  transform: rotate(45deg);
-  margin-left: 5px; /* Space between text and arrow */
-  vertical-align: middle;
-}
+  /* Dropdown Arrow */
+  .dropbtn::after {
+    content: '';
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 1px;
+    transform: rotate(45deg);
+    margin-left: 5px; /* Space between text and arrow */
+    vertical-align: middle;
+  }
 
-/* Dropdown Arrow */
-.dropbtn::after {
-  content: '';
-  border: solid #000;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 1px;
-  transform: rotate(45deg);
-  margin-left: 5px;
-  vertical-align: middle;
-}
+  /* Dropdown Arrow */
+  .dropbtn::after {
+    content: '';
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 1px;
+    transform: rotate(45deg);
+    margin-left: 5px;
+    vertical-align: middle;
+  }
 /* General layout of container */
 .container1 {
   display: flex;
@@ -131,7 +129,7 @@ header {
 }
 
 .heading h1 {
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: bold;
   margin: 0;
   color: #232323;
@@ -140,10 +138,10 @@ header {
 }
 
 .heading p {
-  font-size: 24px;
+  font-size:1.9rem;
   color: #50506A;
   text-align: left;
-  margin: 10px 0; /* Consistent margin for paragraph */
+  margin: 20px 0; /* Consistent margin for paragraph */
   font-family: Inter, sans-serif;
 }
 
@@ -175,7 +173,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   margin-left: 2rem;
   
 }
@@ -212,7 +209,7 @@ header {
 .images-container {
   display: flex; /* Align images side by side */
   justify-content: flex-start; /* Align images to the left */
-  animation: scrollImage 45s linear infinite; /* Scroll images infinitely */
+  animation: scrollImage 15s linear infinite; /* Scroll images infinitely */
 }
 
 /* Style for each image */
@@ -252,6 +249,7 @@ header {
 .features-header h4 {
   font-size: 1.2rem;
   color: #50506A;
+  text-align: center;
   font-weight: normal;
   margin-top: 0.8rem;
 }
@@ -662,24 +660,27 @@ footer {
 
 .input-wrapper {
   position: relative;
+  display: inline-block;
 }
 
 input[type="text"] {
-  padding: 10px 10px 10px 40px;
+  margin-top: 1.3rem;
+  padding: 10px;
   font-size: 1rem;
-  color: white;
+  color:#FFFFFF;
   border-radius: 4px;
   background-color: #ffffffbc;
 }
 
 
 .input-wrapper svg {
-  position: absolute;
-  right: 20px;
-  top:50px ;
-  transform: translateY(-50%);
-  pointer-events: none;
+  position: absolute; 
+  top: 80%;
+   right: 10px;
+    transform: translateY(-50%); 
+  cursor: pointer;
 }
+
 /*new section */
   .more-feature-contain {
     display: flex;
@@ -749,3 +750,23 @@ input[type="text"] {
     height: auto;
     animation: invertChange 2s infinite;
   }
+  @media (max-width: 1053px) {
+    header {
+      gap: 10px; /* Reduce space between elements */
+      padding: 0.5em 1em; /* Reduce padding */
+    }
+  
+    .navbar ul {
+      gap: 15px; /* Reduce spacing between navbar items */
+    }
+  
+    .navbar a {
+      font-size: 1.1rem; /* Reduce font size */
+      padding: 3px 7px; /* Adjust padding */
+    }
+  
+    .hamburger {
+      display: flex; /* Show hamburger menu on smaller screens */
+    }
+  }
+  
