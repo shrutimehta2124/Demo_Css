@@ -41,16 +41,18 @@
     }
 
     .left-content {
+      flex: 1 1 50%;
+
         text-align: left;
         padding: 1rem 0;
     }
 
     .heading h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .heading p {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-top: 25px;
     }
 
@@ -65,12 +67,14 @@
     }
   
     .right-content img {
+
       height: auto; /* Maintain the aspect ratio */
       margin-top: 2rem;
+      max-width: 50%;
     }
 
     .img-container img {
-   
+      max-width: 80%;
     }
     /*scroll img section*/
     .scrolling-images img {
@@ -292,30 +296,25 @@
             }
 
             .left-content {
-                max-width: 50%;
                 text-align: left;;
                 padding: 1rem 0;
             }
 
             .heading h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .heading p {
-                font-size: 1rem;
+                font-size: 1.4rem;
             }
 
             .img-container  img{
-                justify-content:left;
+              width: 70%;                
             }
-            .right-content {
-              flex: 1 1 100%; /* Make the element take full width */
-              margin-left: 0; /* Remove margin to prevent overflow */
-              padding: 0; /* Remove any unnecessary padding */
-            }
+           
           
             .right-content img {
-          
+              max-width:50%;
               height: auto; /* Maintain the aspect ratio */
               margin-top: 2rem;
             }
@@ -495,13 +494,13 @@
           
           /*footer section*/
           footer {
-            padding: 20px; /* Reduce padding */
+            padding: 15px; /* Reduce padding */
           }
         
           .footer-section {
             flex-direction: column;  /*Stack sections vertically */
            flex-wrap: wrap; 
-           gap: 20px; /* Space between sections */
+           gap: 15px; /* Space between sections */
           }
         
           .footer-left,
@@ -571,23 +570,27 @@
           }
         
           .right-content img {
-          
+            max-width: 50%;
             height: auto; /* Maintain aspect ratio */
             margin-top: 2rem;
           }
             .container1{
+              padding: 0.625rem;
               margin-top: 50px;
             }
             .heading h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .heading p {
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
 
             .img-container img {
-                max-width: 100%;
+                max-width: 60%;
+            }
+            .right-content img {
+              width: 60%;
             }
 
             /*new section start*/
