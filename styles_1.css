@@ -70,7 +70,7 @@
 
       height: auto; /* Maintain the aspect ratio */
       margin-top: 2rem;
-      max-width: 70%;
+      max-width: 80%;
     }
 
     .img-container img {
@@ -314,7 +314,7 @@
            
           
             .right-content img {
-              max-width:70%;
+              max-width:80%;
               height: auto; /* Maintain the aspect ratio */
               margin-top: 2rem;
             }
@@ -590,7 +590,7 @@
                 max-width: 60%;
             }
             .right-content img {
-              width: 60%;
+              max-width: 80%;
             }
 
             /*new section start*/
