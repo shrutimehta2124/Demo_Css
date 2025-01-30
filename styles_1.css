@@ -47,6 +47,7 @@
     }
   
     .heading h1 {
+      margin-top: 30px;
       font-size: 2rem; /* Smaller heading font size */
     }
   
@@ -286,6 +287,7 @@
   }
 
   .heading h1 {
+    margin-top: 30px;
     font-size: 1.8rem; /* Smaller heading font size */
   }
 
@@ -562,6 +564,7 @@
           }
         
           .heading h1 {
+            margin-top: 30px;
             font-size: 1.5rem; /* Reduce heading size for small screens */
           }
         
