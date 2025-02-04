@@ -9,7 +9,7 @@
     position: sticky;
     top: 60px;
     right: 0;
-    background-color: white;
+    background-color: #ffffffc9;
     padding: 1em 0;
 }
 
@@ -35,40 +35,42 @@
 
     /*new section*/
     .container1 {
-      flex-direction: column; /* Stack left and right content vertically */
-      padding: 20px;
+      flex-direction: column; /* Stack items vertically */
+      padding: 20px; /* Reduce padding on smaller screens */
+      align-content: center;
     }
   
-    .left-content,
-    .right-content {
+    .left-content, .right-content {
       flex: 1 1 100%; /* Take full width on smaller screens */
-      margin-left: 0;
-      margin-bottom: 1rem; /* Add space between the sections */
+      margin-left: 0; /* Remove left margin */
+      margin-bottom: 20px; /* Add space between the sections */
     }
   
     .heading h1 {
-      margin-top: 30px;
-      font-size: 2rem; /* Smaller heading font size */
+      font-size: 2rem; /* Smaller font size for better readability */
+      margin-top: 8rem; /* Adjust the top margin */
     }
   
     .heading p {
-      font-size: 1.25rem; /* Slightly smaller paragraph font size */
+      font-size: 1rem; /* Adjust paragraph font size */
     }
   
     .img-container {
-      flex-direction: column;
-      margin-top: 10px;
-      align-items:baseline;
-      gap: 1rem;
-      max-width: 100%; /* Make image container take full width on smaller screens */
+      flex-direction: row; /* Stack the images vertically */
+      gap: 0.8rem; /* Reduce the gap between images */
+      align-items: flex-end; /* Align the images to the left */
+      margin-left: 0; /* Align the images with the text */
     }
   
     .img-container img {
-      max-width: 80%; /* Adjust width of the images on smaller screens */
+      max-width: 50%; /* Ensure the images fit within their container */
+      padding: 0.2rem; /* Adjust padding for better spacing */
     }
   
     .right-content img {
-      max-width: 100%;
+      align-items:   baseline;
+      max-width: 60%; /* Reduce the image width */
+      margin-top: 2rem; /* Adjust the margin for proper spacing */
     }
    
     /*scroll img section*/
@@ -114,6 +116,7 @@
           flex: 1;
           order: 1;
           margin-left: 0;
+          
         }
         .content-item-feature {
           flex-direction: row; /* Stack icon and text vertically */
@@ -124,6 +127,8 @@
         .feature-image-1 {
           margin-top: 5rem; /* Move the image below the text */
           height: auto;
+          max-width: 45%;
+          margin-left: 20%;
         }
         h4 {
           font-size: 1.35rem;
@@ -134,28 +139,32 @@
         }
         /*Blue Div Section Start*/
         .blue-section {
-          flex-direction: column; /* Stack sections vertically */
-          gap: 15px;
-          
+          padding: 10px; /* Further reduce padding for very small screens */
         }
       
         .left img {
-          max-width: 70%; /* Image adjusts to container width */
-          height: auto;
-          margin-bottom: 50px;
+          max-width: 90%; /* Slightly reduce the image size for better fit */
+          margin-top: 0; /* Ensure the image is aligned properly */
+        }
+      
+        .right {
+          text-align: center; /* Ensure text is centered */
+          padding: 10px; /* Adjust padding for smaller screens */
         }
       
         .right h3 {
-          font-size: 36px;
+          font-size: 20px; /* Smaller font size for the heading */
+          margin-top: 10px; /* Add top margin for better spacing */
         }
       
         .right p {
-          font-size: 18px;
-       
+          font-size: 16px; /* Adjust font size to be readable on small devices */
+          margin-top: 10px; /* Reduce space above the paragraph */
         }
       
         .right button {
-          padding: 8px 16px; /* Smaller padding for mobile */
+          padding: 10px 20px; /* Adjust button padding */
+          font-size: 14px; /* Button size remains similar */
         }
           /*(new section)4 div */
           .container {
@@ -211,40 +220,44 @@
           }
           /*footer section */
           .footer-section {
-            flex-direction: column; /* Stack footer sections vertically */
-            flex-wrap: wrap;
-            align-items: flex-start; /* Align items to the left */
+            flex-direction: column; /* Stack the left and right sections vertically */
+            gap: 30px; /* Add gap between stacked sections */
           }
         
-          .footer-left,
+          .footer-right {
+            max-width: 100%; /* Take full width */
+            justify-content: center;
+          }
+        
           .footer-center-contain {
-            flex: 1 1 100%; /* Allow each section to take full width */
-            max-width: 100%;
+            display: flex; /* Ensure flex layout */
+            flex-direction: row; /* Keep the sections horizontally aligned */
+            justify-content: space-between; /* Keep equal space between sections */
+            gap: 20px;
+            width: 100%; /* Full width */
           }
         
-         
-          .footer-logo img {
-            flex-shrink: 0;
-            max-width: 100px; /* Adjust logo size for medium screens */
+          .footer-1, .footer-2 {
+            flex: 1; /* Allow both to take equal space */
+            max-width: 50%; /* Limit the width of the columns */
           }
         
-          .footer-img img {
-            flex-shrink: 0;
-            max-width: 100px; /* Adjust image size for medium screens */
-          }
-        
-          .footer-1 h4, .footer-2 h4 {
-            font-size: 18px; /* Adjust font size */
-            margin-top: 20px;
-          }
-        
-          .footer-center-contain ul li a {
-            font-size: 14px; /* Adjust link font size */
-          }
-        
+          /* Adjust .updated-section to stay in the same row as footer-2 */
           .updated-section {
-            margin-top: 20px;
-            text-align: center; /* Center align updated section content */
+            flex: 1;
+            max-width: 50%; /* Ensure it takes equal space with footer-1 and footer-2 */
+          }
+        
+          /* Stack the links inside .footer-2 vertically */
+          .footer-2, .updated-section {
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            gap: 10px;
+          }
+        
+          /* Ensure the .updated-section's input field is full-width */
+          .updated-section .input-wrapper input[type="text"] {
+            width: 100%;
           }
 }
 
@@ -276,27 +289,28 @@
  
   /*new section*/
   .container1 {
-    padding: 10px;
+    padding: 1.25rem;
+    text-align: center;
   }
 
   .left-content,
   .right-content {
     flex: 1 1 100%; /* Stack content vertically */
     margin-left: 0;
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
   }
 
   .heading h1 {
-    margin-top: 30px;
-    font-size: 1.8rem; /* Smaller heading font size */
+
+    font-size: 2.2rem; /* Smaller heading font size */
   }
 
   .heading p {
-    font-size: 1.15rem; /* Adjust paragraph font size */
+    font-size: 1.4rem; /* Adjust paragraph font size */
   }
 
   .img-container {
-    flex-direction: column;
+    flex-direction: row;
     gap: 0.8rem; /* Reduce gap between images */
     align-items:baseline;
   }
@@ -306,7 +320,7 @@
   }
 
   .right-content img {
-    max-width: 100%;
+    max-width: 75%;
     margin-top: 1rem;
   }
         /*new section*/
@@ -345,8 +359,9 @@
       
         /* Adjusting image responsiveness */
         .feature-image {
-          width: 100%;
+          max-width: 60%;
           height: auto;
+           margin-left: 20%;
           margin-top: 20px;
         }
 
@@ -398,36 +413,28 @@
         
           /*blue Section Div*/
           /* Blue section layout */
-.blue-section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 100%;
-  box-sizing: border-box; /* Include padding and borders in the total width/height */
-}
-
-/* Left side image */
-.left img {
-  margin-bottom: 50px;
-  height: auto; /* Keep the aspect ratio of the image */
-  object-fit: contain; /* Ensure the image is contained within its container */
-}
-
-/* Right side text */
-.right h3 {
-  font-size: 32px;
-  top: 10px;
-}
-
-.right p {
-  font-size: 16px;
- 
-}
-
-.right button {
-  padding: 6px 12px;
- 
-}
+          .blue-section {
+            padding: 15px; /* Further reduce padding */
+          }
+        
+          .left img {
+            max-width: 100%; /* Make the image fully responsive */
+            top: 0; /* Ensure image stays centered */
+            margin-top: 0; /* Remove top margin */
+          }
+        
+          .right h3 {
+            font-size: 24px; /* Smaller font size for the heading */
+          }
+        
+          .right p {
+            font-size: 16px; /* Adjust paragraph font size */
+          }
+        
+          .right button {
+            padding: 10px 20px; /* Adjust button padding */
+            font-size: 14px; /* Adjust button font size */
+          }
 
           /*new section(4div)*/
           .container {
@@ -479,44 +486,70 @@
           }
           
           /*footer section*/
-          footer {
-            padding: 15px; /* Reduce padding */
-          }
-        
           .footer-section {
-            flex-direction: column;  /*Stack sections vertically */
-           flex-wrap: wrap; 
-           gap: 15px; /* Space between sections */
+            flex-direction: column; /* Stack the sections vertically */
+            gap: 30px;
           }
         
-          .footer-left,
-          .footer-center-contain {
-            flex: 1 1 100%; /* Take full width */
-            max-width: 100%;
+          .footer-left {
+            display: flex;
+            flex-direction: column; /* Stack the items in footer-left vertically */
+            align-items: flex-start; /* Align to the left */
+            gap: 10px;
+            width: 100%; /* Ensure it takes full width of the container */
           }
         
           .footer-logo img {
-            flex-shrink: 0;
-            max-width: 120px; /* Further reduce logo size */
+            width: 179.08px;
+            height: 33px;
+          }
+        
+          .footer-copyright p {
+            color: white;
+            margin-top: 20px;
+            text-align: left;
+          }
+        
+          .footer-img {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
           }
         
           .footer-img img {
-            flex-shrink: 0;
-            max-width: 100px; /* Further reduce image size */
+            width: 134px;
+            height: 48px;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            cursor: pointer;
           }
         
-          .footer-1 h4, .footer-2 h4 {
-            margin-top: 20px;
-            font-size: 16px; /* Adjust font size for smaller screens */
+          /* Ensure the footer-left section is aligned to the left */
+          .footer-left {
+            align-items: flex-start; /* Align to the left */
+            justify-content: flex-start; /* Align content to the start */
           }
         
-          .footer-center-contain ul li a {
-            font-size: 14px; /* Adjust font size for links */
+          .footer-center-contain {
+            gap: 15px; /* Reduce gap */
           }
         
-          .updated-section {
-            margin-top: 20px;
-            text-align: center; /* Center align content for smaller screens */
+          .footer-1 h4, .footer-2 h4, .updated-section h4 {
+            font-size: 18px; /* Reduce font size */
+          }
+        
+          .footer-img img {
+            width: 120px; /* Adjust image size */
+            height: 40px;
+          }
+        
+          .footer-copyright p {
+            font-size: 14px; /* Adjust font size */
+            text-align: center;
+          }
+        
+          .footer-img {
+            justify-content: center; /* Center images */
           }
         }
 
@@ -528,7 +561,7 @@
             box-sizing: border-box;
           }
           header {
-            flex-direction: column;
+            flex-direction: row;
             position: sticky;
             align-items: flex-start;
             padding: 1em;
@@ -553,23 +586,24 @@
         }
           /*new section*/
           .container1 {
-            padding: 10px;
+            padding: 0.9375rem;
+            text-align: center;
           }
         
           .left-content,
           .right-content {
             flex: 1 1 100%; /* Full-width layout on mobile */
-            margin-left: 0;
-            margin-bottom: 1rem;
+            /*margin-left: 0;*/
+           /* margin-bottom: 1rem;*/
           }
         
           .heading h1 {
-            margin-top: 30px;
-            font-size: 1.5rem; /* Reduce heading size for small screens */
+            /*margin-top: 30px;*/
+            font-size: 1.8rem; /* Reduce heading size for small screens */
           }
         
           .heading p {
-            font-size: 1rem; /* Smaller paragraph text */
+            font-size: 1.3rem; /* Smaller paragraph text */
           }
         
           .img-container {
@@ -584,7 +618,7 @@
         
           .right-content img {
             max-width: 100%;
-            margin-top: 1rem;
+           /* margin-top: 1rem;*/
           }
               /* Full-width content */
               .content-grid {
@@ -641,39 +675,25 @@
                 height: 30px;
               }
               /*Blue Section Div */
-              .blue-section {
-                padding: 10px; /* Add some padding for small screens */
-                margin: 0; /* Remove margins if necessary */
-              }
-            
-              .right h3 {
-                font-size: 24px; /* Smaller heading for small screens */
-              }
-            
-              .right p {
-                font-size: 14px; /* Adjust paragraph font size */
-              }
-            
-              .right button {
-                padding: 8px 16px; /* Larger padding for buttons */
-              }
-            /*Blue Section Div */
-              .blue-section {
-                padding: 10px; /* Add some padding for small screens */
-                margin: 0; /* Remove margins if necessary */
-              }
-            
-              .right h3 {
-                font-size: 24px; /* Smaller heading for small screens */
-              }
-            
-              .right p {
-                font-size: 14px; /* Adjust paragraph font size */
-              }
-            
-              .right button {
-                padding: 8px 16px; /* Larger padding for buttons */
-              }
+                .blue-section {
+                  padding: 10px; /* Reduce padding further */
+                }
+              
+                .left img {
+                  max-width: 100%; /* Ensure image is responsive and fits screen */
+                }
+              
+                .right h3 {
+                  font-size: 20px; /* Further reduce font size for small screens */
+                }
+              
+                .right p {
+                  font-size: 14px; /* Reduce font size for paragraphs */
+                }
+              
+                .right button {
+                  font-size: 12px; /* Further reduce button font size */
+                }
               /*new section(4div)*/
               .container {
                 grid-template-columns: 1fr;  /* 1 item per row */
@@ -731,46 +751,34 @@
              
               /*footer section*/
               footer {
-                padding: 15px; /* Further reduce padding */
+                padding: 15px; /* Reduce footer padding */
               }
             
-              .footer-section {
-                flex-wrap: wrap;
-                flex-direction: column;
-                gap: 20px; /* Space between sections */
+              .footer-left, .footer-right {
+                flex: 1 1 100%; /* Stack sections vertically */
               }
             
-              .footer-left,
               .footer-center-contain {
-                flex: 1 1 100%; /* Take full width */
-                max-width: 100%;
+                flex-direction: column; /* Stack sections vertically */
+                gap: 10px;
               }
             
-              .footer-logo img {
-                flex-shrink: 0;
-               max-width: 100%; /* Adjust logo size for small screens */
+              .footer-1 h4, .footer-2 h4, .updated-section h4 {
+                font-size: 16px; /* Reduce font size */
               }
             
               .footer-img img {
-                flex-shrink: 0;
-                max-width: 100%; /* Adjust image size for small screens */
+                width: 100px; /* Further adjust image size */
+                height: 35px;
               }
             
-              .footer-1 h4, .footer-2 h4 {
-               
-                font-size: 14px; /* Adjust font size for very small screens */
+              .footer-copyright p {
+                font-size: 12px; /* Further adjust font size */
+                text-align: center;
               }
             
-              .footer-center-contain ul li a {
-                font-size: 12px; /* Adjust font size for links */
-              }
-            
-              .updated-section {
-                text-align: center; /* Center align content */
-              }
-            
-              .input-wrapper input[type="text"] {
-                padding: 10px 10px 10px 30px; /* Adjust padding for smaller input */
+              .updated-section .input-wrapper input[type="text"] {
+                width: 100%; /* Make input field full width */
               }
             }
 
@@ -885,5 +893,84 @@
                 text-align: center; /* Center align the text */
               }
             }
-            
-            
+/* For screens between 993px and 1151px */
+@media (min-width: 990px) and (max-width: 1158px) {
+  .footer-center-contain {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .footer-1, .footer-2, .updated-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-center-contain ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .footer-center-contain ul li {
+    margin-top: 10px;
+    margin-right: 20px; /* Ensure there's space between the list items */
+  }
+
+  .footer-center-contain ul li a {
+    color: #9FA5C0;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-center-contain ul li a:hover {
+    color: #f9c74f;
+  }
+
+  /* Make the support section items stack vertically */
+  .support-navbar {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  /* Make the company section items stack vertically */
+  .Company-navbar {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  /* Responsive Input Section */
+  .input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Ensure the wrapper takes up full width of its container */
+    max-width: 350px; /* Limit max width for large screens */
+  }
+
+  input[type="text"] {
+    margin-top: 1.3rem;
+    padding: 10px;
+    font-size: 1rem;
+    color: #FFFFFF;
+    border-radius: 4px;
+    background-color: #ffffffbc;
+    max-width: 100%; /* Make the input take the full width of the wrapper */
+    box-sizing: border-box; /* Ensure padding doesn't overflow the input field */
+  }
+
+  .input-wrapper svg {
+    position: absolute;
+    top: 80%;
+    right: 121px; /* Move the icon to the right */
+    transform: translateY(-50%); /* Center the icon vertically */
+    cursor: pointer;
+}}
+
+
+        

@@ -9,17 +9,20 @@ body{
   height: auto;
   box-sizing: border-box;
 }
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em 2em; /* Increased padding for spacing */
-    position: sticky;
-    top: 0; /* Stick the header to the top */
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3 ); /* Optional: adds shadow for better separation */
-    gap: 20px; /* Adds space between logo and navbar */
-  }
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  position: fixed; /* Change to fixed to keep the header at the top */
+  top: 0;
+  left: 0; /* Optional: for better positioning */
+  width: 100%; /* Ensure the header spans the full width */
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0); /* Optional: adds shadow for better separation */
+  gap: 20px;
+  background-color: #ffffff; /* Ensure background color to avoid content behind */
+}
 
   /* Logo Styling */
   .logo {
@@ -39,7 +42,7 @@ body{
     display: none; /* Hidden by default */
     flex-direction: column;
     justify-content: space-between;
-    width: 30px;
+    width: 30px;  
     height: 21px;
     cursor: pointer;
     gap: 5px; /* Adds space between hamburger lines */
@@ -62,6 +65,7 @@ body{
 
   .navbar ul {
     display: flex;
+    margin-right: 80px;
     gap: 20px;
     list-style-type: none;
   }
@@ -74,8 +78,8 @@ body{
   .navbar a {
     text-decoration: none;
     color: black;
-    font-size: 1.3rem;
-    padding: 5px 10px; /* Adds space around text in links */
+    font-size: 1rem;
+    /*padding: 5px 5px;  Adds space around text in links */
     transition: color 0.3s ease;
   }
 
@@ -110,10 +114,11 @@ body{
 .container1 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between; /* Distribute items evenly with space between */
   align-items: center;
   padding: 40px;
   margin: 0 auto; /* Center the container */
+  max-width: 1200px; /* Optional: You can set a max-width for better control */
 }
 
 /* Left side content */
@@ -126,23 +131,22 @@ body{
   flex-direction: column; /* Arrange items vertically */
 }
 
-
 .heading {
-  max-width:100%;
+  max-width: 100%;
   margin-bottom: 20px;
 }
 
 .heading h1 {
-  font-size: 2.8rem;
+  font-size: 2.3rem;
   font-weight: bold;
-  margin: 0;
+  margin-top:  4rem;;
   color: #232323;
   font-family: Inter, sans-serif;
   text-align: left;
 }
 
 .heading p {
-  font-size:1.5rem;
+  font-size: 1.3rem;
   color: #50506A;
   text-align: left;
   margin: 20px 0; /* Consistent margin for paragraph */
@@ -153,9 +157,8 @@ body{
 .img-container {
   display: flex;
   gap: 1rem;
-  padding: 0.5rem;
   align-items: center;
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -178,18 +181,17 @@ body{
   justify-content: center;
   align-items: center;
   margin-left: 2rem;
-  
 }
 
 .right-content img {
   height: auto;
+  max-width: 85%;
   object-fit: cover;
   border-radius: 20px;
   position: relative;
   animation: filterChange 60s infinite ease-in-out;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
-
 /* Animation for image */
 @keyframes filterChange {
   0% {
@@ -266,6 +268,7 @@ body{
 
 .feature-image {
   object-fit: cover;
+  max-width: 80%;
   animation: invertChange 2s infinite;
 }
 
@@ -345,118 +348,124 @@ body{
 /* Main blue section */
 .blue-section {
   display: flex;
-  flex-wrap: wrap;
+    margin: 25rem,25rem;
+  flex-direction: row; /* Ensure left and right sections are side-by-side */
+  flex-wrap: nowrap; /* Prevent wrapping, keep sections in a single line */
   background-image: url('images/line-background.png'); /* Set your background image */
   background-size: cover; /* Ensure the image covers the whole div */
-  margin: 80px 20px 10px 10px;
-  background-color: #4F7EF7; /* Blue background for the whole section */
-  height: auto; /* Height auto to adjust based on content */
-  border-radius: 24px;
-  color: white; /* Text color */
-  justify-content: space-between; /* Spread out the left and right sections */
-  box-sizing: border-box; /* Include padding and borders in the element's width and height */
-  gap: 20px; /* Add some gap between left and right sections */
+  margin: 10px auto; /* Center the section horizontally with auto margins */
+  background-color: #4F7EF7; /* Blue background */
+  height: 400px; /* Fixed height */
+  max-width: 100%; /* Set max-width to take full width of the container */
+  border-radius: 24px; /* Rounded corners */
+  color: white; /* White text */
+  justify-content: space-between; /* Distribute space evenly between left and right sections */
+  box-sizing: border-box; /* Include padding and borders in width/height calculations */
+  gap: 20px; /* Gap between left and right sections */
+  padding: 0 20px; /* Padding inside the section */
 }
 
 /* Left side with background image */
 .left {
   flex: 1; /* Takes up equal space as the right section */
-  height: auto; /* Auto adjust the height */
   display: flex;
   justify-content: center; /* Center the image horizontally */
-  align-items: flex-start; /* Align items to the top */
+ /* align-items: flex-start;  Align items to the top */
   position: relative; /* Allow positioning of child elements */
 }
 
 /* Styling for the image inside the left div */
 .left img {
-  
+  margin-top: 50px;
   display: block; /* Ensures no extra space below the image */
-  border-radius: 8px; /* Rounded corners */
-  transition: transform 0.3s ease;
-  position: relative; /* Allow positioning of the image */
-  top: -90px; /* Slightly adjust image upwards without overflowing */
+  border-radius: 8px; /* Rounded corners for the image */
+  transition: transform 0.3s ease; /* Transition for the hover effect */
+  max-width: 50%; /* Ensure image doesn’t stretch too much */
+  position: relative;
+  top: -90px; /* Slight adjustment upwards without overflowing */
 }
 
 /* Hover effect on image */
 .left img:hover {
-  transform: rotate(20deg); /* Rotate the image on hover */
+  transform: rotate(20deg); /* Rotate image on hover */
 }
-
-
 
 /* Right side for text content */
 .right {
   flex: 1; /* Takes up equal space as the left section */
   display: flex;
   flex-direction: column; /* Stack text and button vertically */
-  justify-content: center; /* Align to the top */
+  justify-content: center; /* Align content to the top */
   align-items: flex-start; /* Align text and button to the left */
-  padding: 25px;
+  padding: 25px; /* Padding inside the right section */
 }
 
-/* Heading for the discount offer */
+/* Heading for the right section */
 .right h3 {
-  font-family: Inter, sans-serif;
-  font-size: 48px;
+  font-family: 'Inter', sans-serif;
+  font-size: 36px; /* Reduced font size for better balance */
   font-weight: 600;
   padding: 0; /* Remove padding from h3 */
-  margin: 0 0 20px 0; /* Remove top margin and add some space below */
+  margin: 0 0 15px 0; /* Reduced bottom margin */
   text-align: left; /* Align text to the left */
   word-wrap: break-word; /* Break words to prevent overflow */
+  line-height: 1.4; /* Added line height for readability */
 }
 
 /* Paragraph for the offer details */
 .right p {
-  font-family: Inter, sans-serif;
-  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px; /* Reduced font size for better balance */
   text-align: left; /* Align text to the left */
-  margin: 0 0 20px 0; /* Ensure paragraph starts below the heading */
+  margin: 0 0 15px 0; /* Add margin below the paragraph */
+  line-height: 1.6; /* Adjusted line height for better readability */
 }
 
 /* Button styles */
 .right button {
-  padding: 12px 24px; /* Adjust padding for a more clickable button */
+  padding: 12px 24px; /* Button padding */
   border-radius: 5px;
   cursor: pointer;
-
-  background-color: #FFFFFF; /* White background for the button */
+  background-color: #FFFFFF; /* White background */
   color: #4F7EF7; /* Blue text */
   border: none; /* Remove default button border */
+  font-size: 16px; /* Set a font size for the button */
+  font-weight: 500; /* Set font weight for the button */
 }
 
 /* Button hover effect */
 .right button:hover {
-  background-color: lightgray; /* Button color on hover */
+  background-color: lightgray; /* Light gray background on hover */
 }
 
-
-
-/*new section started*/
+/*new section */
+/* .container with equal space for each item */
 .container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);  /* 2 items per row */
   gap: 20px;  /* Space between items */
-  margin-top: 30px;
-  margin: 30px 30px 0 30px;
+  margin: 40px;  /* Add some margin around the container */
 }
+
+/* .item styling to ensure equal spacing */
 .item {
-  background-color: #4F7EF712;
+  background-color: #4F7EF712; /* Transparent background */
   display: flex;
   flex-direction: column;
   padding: 20px;
   border-radius: 24px;
   text-align: center;
-  padding-top: 30px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding and borders in width/height calculations */
 }
 
+/* Styling for SVG inside each item */
 .item svg {
   width: 40.18px;
   height: 43px;
   top: 2.5px;
 }
 
+/* Heading styling for each item */
 .item h3 {
   margin-top: 10px;
   font-family: Inter;
@@ -466,7 +475,8 @@ body{
   text-align: left;
 }
 
-p {
+/* Paragraph styling inside each item */
+.item p {
   margin-top: 15px;
   font-family: Inter;
   font-size: 20px;
@@ -474,65 +484,72 @@ p {
   line-height: 28px;
   text-align: left;
   margin-left: 1px;
-  }
+}
 
 /* New section started */
+/* Main Container */
 .main-container {
   margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;  /* Allow elements to wrap */
   justify-content: space-between;  /* Distribute space evenly between items */
-  align-items: center;  /* Vertically align items */
-  background-color: #4F7EF712;
+  align-items: center;  /* Vertically align items to the center */
+  background-color: #4F7EF712;  /* Background color */
+  max-width: 100%;
+  height: 600px;  /* Set a fixed height for the container */
+  padding: 30px 10px;  /* Adjust padding to ensure equal space on top and bottom */
+  box-sizing: border-box;  /* Include padding in width/height calculation */
 }
 
-.leftside-content,
-.rightside-content {
-  flex: 1; /* Allow each container to grow */
-  height: auto;
-}
-
+/* Left side content */
 .leftside-content {
+  flex: 1;  /* Equal space as the right section */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;  /* Vertically center content */
   align-items: flex-start;  /* Align content to the left */
+  padding-bottom: 0;  /* No padding at the bottom */
+  height: 100%;  /* Ensure this section takes up full height available */
 }
 
+/* Text content styles for left-side */
 .txt-content h2 {
-  text-align: left;
-  margin: bottom 30px;
-  font-family: Inter;
-  font-size: 60px;
+  text-align: left;  /* Align text to the left */
+  font-family: Inter, sans-serif;
+  font-size: 45px;  /* Adjusted font size */
   font-weight: 700;
-  line-height: 72px;
-  margin-left: 100px;
-  height: auto;
+  line-height: 58px;
+  margin-left: 40px;  /* Left margin */
+  margin-bottom: 20px;
 }
 
 .txt-content p {
-  text-align: left;
-  font-family: Inter;
-  font-size: 24px;
-  margin-top: 30px;
+  text-align: left;  /* Align text to the left */
+  font-family: Inter, sans-serif;
+  font-size: 20px;  /* Adjusted font size */
   font-weight: 500;
-  line-height: 1.4;
-  margin-left: 100px;
+  line-height: 1.6;
+  margin-left: 40px;  /* Left margin */
+  margin-top: 15px;
 }
 
+/* Image content section */
 .img-content {
-  margin-top: 24px; /* Add space between text and images */
-  display: flex;  /* Display images horizontally */
-  margin-left: 100px; /* Align images with the text */
+  margin-top: 20px;  /* Add space between text and images */
+  display: flex;
+  margin-left: 40px;  /* Align images with the text */
 }
 
 .img-content img {
-  width: 150px; /* Control image size */
+  width: 120px;  /* Adjusted image size */
   height: auto;
-  margin-right: 16px; /* Space between the two images */
+  cursor: pointer;
+  margin-right: 12px;  /* Space between the images */
 }
 
+/* Right side content */
 .rightside-content {
+  flex: 1;  /* Equal space as the left section */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -541,6 +558,7 @@ p {
 .rightside-content img {
   position: relative;
   opacity: 1;
+  max-width: 40%;
   top: -100px;
   animation: opacityChange 60s infinite;
 }
@@ -562,10 +580,9 @@ footer {
   background-color: #161639;
   padding: 40px;
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping of child elements on smaller screens */
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  
   height: auto;
 }
 
@@ -580,7 +597,7 @@ footer {
 .footer-left {
   flex: 1;
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -610,26 +627,34 @@ footer {
   cursor: pointer;
 }
 
-.footer-center-contain {
-  flex: 1;
+/* Footer-right section */
+.footer-right {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: flex-start; /* Align left */
+  flex: 2;
   max-width: 50%;
+}
+
+/* Footer center container with horizontal alignment */
+.footer-center-contain {
+  display: flex;
+  justify-content: space-between; /* Align horizontally */
+  gap: 20px;
+  width: 100%; /* Full width */
   flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.footer-1, .footer-2 {
+.footer-1, .footer-2, .updated-section {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.footer-1 h4, .footer-2 h4 ,.input-wrapper h4{
+.footer-1 h4, .footer-2 h4, .updated-section h4 {
   color: #FFFFFF;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 500;
   line-height: 28px;
   text-align: left;
@@ -651,13 +676,12 @@ footer {
   transition: color 0.3s;
 }
 
-
 .footer-center-contain ul li a:hover {
   color: #f9c74f;
 }
 
 .updated-section {
-
+  flex: 1;
 }
 
 .input-wrapper {
@@ -669,17 +693,16 @@ input[type="text"] {
   margin-top: 1.3rem;
   padding: 10px;
   font-size: 1rem;
-  color:#FFFFFF;
+  color: #FFFFFF;
   border-radius: 4px;
   background-color: #ffffffbc;
 }
 
-
 .input-wrapper svg {
-  position: absolute; 
+  position: absolute;
   top: 80%;
-   right: 10px;
-    transform: translateY(-50%); 
+  right: 10px;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 
@@ -755,7 +778,7 @@ input[type="text"] {
   }
   .feature-image-1 {
     object-fit: cover;
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
     animation: invertChange 2s infinite;
   }
