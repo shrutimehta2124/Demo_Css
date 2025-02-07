@@ -35,44 +35,47 @@
 
     /*new section*/
     .container1 {
+      display: flex;
       flex-direction: column; /* Stack items vertically */
-      padding: 20px; /* Reduce padding on smaller screens */
+      padding: 30px; /* Adjust padding for medium-sized screens */
       align-content: center;
-    }
-  
-    .left-content, .right-content {
+  }
+
+  .left-content, .right-content {
       flex: 1 1 100%; /* Take full width on smaller screens */
       margin-left: 0; /* Remove left margin */
-      margin-bottom: 20px; /* Add space between the sections */
-    }
-  
-    .heading h1 {
-      font-size: 2rem; /* Smaller font size for better readability */
-      margin-top: 8rem; /* Adjust the top margin */
-    }
-  
-    .heading p {
-      font-size: 1rem; /* Adjust paragraph font size */
-    }
-  
-    .img-container {
-      flex-direction: row; /* Stack the images vertically */
-      gap: 0.8rem; /* Reduce the gap between images */
-      align-items: flex-end; /* Align the images to the left */
+      margin-bottom: 25px; /* Add more space between the sections */
+  }
+
+  .heading h1 {
+      font-size: 2.5rem; /* Adjust font size for better readability */
+      margin-top: 4rem; /* Adjust the top margin to bring it closer */
+  }
+
+  .heading p {
+      font-size: 1.6rem; /* Increase font size for the paragraph */
+      line-height: 1.6; /* Increase line height for better readability */
+      margin-top: 10px; /* Add space between the heading and paragraph */
+  }
+
+  .img-container {
+      flex-direction: row; /* Keep images side-by-side */
+      gap: 1.2rem; /* Increase the gap between images slightly */
+      align-items: center; /* Align the images to the center */
       margin-left: 0; /* Align the images with the text */
-    }
-  
-    .img-container img {
-      max-width: 50%; /* Ensure the images fit within their container */
-      padding: 0.2rem; /* Adjust padding for better spacing */
-    }
-  
-    .right-content img {
-      align-items:   baseline;
-      max-width: 60%; /* Reduce the image width */
-      margin-top: 2rem; /* Adjust the margin for proper spacing */
-    }
-   
+  }
+
+  .img-container img {
+      max-width: 48%; /* Ensure the images fit well side-by-side */
+      padding: 0.5rem; /* Adjust padding for better spacing */
+      border-radius: 8px; /* Optional: Add rounded corners for the images */
+  }
+
+  .right-content img {
+      align-items: center; /* Align images properly */
+      max-width: 65%; /* Reduce the image width slightly */
+      margin-top: 1.5rem; /* Adjust the margin for better spacing */
+  } 
     /*scroll img section*/
     .images-container {
       animation-duration: 10s; /* Faster scrolling on medium screens */
@@ -143,7 +146,8 @@
         }
       
         .left img {
-              top: -50px;
+          flex-shrink: 1;
+          top: -50px;
           max-width: 70%; /* Slightly reduce the image size for better fit */
           margin-top: 0; /* Ensure the image is aligned properly */
         }
@@ -249,7 +253,7 @@
           /* Adjust .updated-section to stay in the same row as footer-2 */
           .updated-section {
             flex: 1;
-            max-width: 50%; /* Ensure it takes equal space with footer-1 and footer-2 */
+            max-width: 30%; /* Ensure it takes equal space with footer-1 and footer-2 */
           }
         
           /* Stack the links inside .footer-2 vertically */
@@ -261,8 +265,16 @@
         
           /* Ensure the .updated-section's input field is full-width */
           .updated-section .input-wrapper input[type="text"] {
-            width: 100%;
+            padding-right: 45px; /* Increase padding for the SVG on smaller screens */
+            font-size: 14px; /* Slightly reduce font size for better readability */
           }
+        
+          .input-wrapper svg {
+            width: 16px;  /* Adjust SVG size for smaller screens */
+            height: 16px; /* Adjust SVG size for smaller screens */
+            right: -50px;  /* Reduce space from the right side for smaller screens */
+          }
+        
 }
 
 
@@ -306,11 +318,11 @@
 
   .heading h1 {
 
-    font-size: 2.2rem; /* Smaller heading font size */
+    font-size: 2rem; /* Smaller heading font size */
   }
 
   .heading p {
-    font-size: 1.4rem; /* Adjust paragraph font size */
+    font-size: 1rem; /* Adjust paragraph font size */
   }
 
   .img-container {
@@ -422,8 +434,8 @@
         }
       
         .left img {
-            top: -30px;  /* Adjust the top position slightly for medium screens */
-            max-width: 40%;  /* Reduce the image size further */
+            top: -60px;  /* Adjust the top position slightly for medium screens */
+            max-width: 70%;  /* Reduce the image size further */
             margin-top: 10px;  /* Keep some margin to ensure proper alignment */
         }
       
@@ -1020,20 +1032,22 @@
   }
 
   .txt-content h2 {
-      font-size: 42px;  /* Reduce font size for headings */
+      font-size: 36px;  /* Adjust heading font size for better balance */
       margin-left: 0;  /* Remove left margin */
-      text-align: center;  /* Center-align the heading */
+      text-align: left;  /* Align the heading to the left */
+      font-weight: 600;  /* Make heading bolder for emphasis */
   }
 
   .txt-content p {
-      font-size: 18px;  /* Reduce font size for paragraphs */
+      font-size: 18px;  /* Adjust paragraph font size for readability */
       margin-left: 0;  /* Remove left margin */
-      text-align: center;  /* Center-align the paragraph */
+      text-align: left;  /* Align the paragraph to the left */
+      line-height: 1.7;  /* Increase line height for readability */
   }
 
   .img-content {
       margin-left: 0;  /* Ensure no left margin */
-      justify-content: center;  /* Ensure the image is centered */
+      justify-content: flex-start;  /* Align images to the left */
       width: 100%; /* Ensure image container takes up full width */
       max-width: 100%; /* Ensure the container fits within the viewport */
   }
@@ -1046,10 +1060,11 @@
 
   .rightside-content img {
       top: 0;  /* Remove negative top margin */
-      max-width: 80%;  /* Adjust image width for smaller screens */
+      max-width: 75%;  /* Adjust image width for smaller screens */
       height: auto; /* Keep aspect ratio */
   }
-}       
+}
+
 @media (max-width: 768px) and (min-width: 480px) {
   .main-container {
       display: flex;
@@ -1061,23 +1076,24 @@
   }
 
   .txt-content h2 {
-      font-size: 30px;  /* Adjust heading font size for better readability */
+      font-size: 28px;  /* Adjust heading font size for better readability */
       margin-left: 0;
-      text-align: center;
-      line-height: 1.3;  /* Increase line height for better readability */
+      text-align: left;  /* Align the heading to the left */
+      line-height: 1.4;  /* Increase line height for better readability */
+      font-weight: 600;  /* Make heading bold */
   }
 
   .txt-content p {
       font-size: 16px;  /* Adjust paragraph font size */
       margin-left: 0;
-      text-align: center;
-      line-height: 1.6;  /* Increase line height for better readability */
+      text-align: left;  /* Align the paragraph to the left */
+      line-height: 1.7;  /* Increase line height for better readability */
       margin-top: 10px;  /* Add a bit of space between text */
   }
 
   .img-content {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;  /* Align images to the left */
       width: 100%;
       max-width: 100%;
       margin-top: 20px;  /* Add margin-top for separation from text */
@@ -1104,23 +1120,24 @@
   }
 
   .txt-content h2 {
-      font-size: 24px;  /* Further reduce heading font size */
+      font-size: 22px;  /* Reduce heading font size for small screens */
       margin-left: 0;
-      text-align: center;
-      line-height: 1.3;
+      text-align: left;  /* Align the heading to the left */
+      line-height: 1.4;  /* Increase line height for readability */
+      font-weight: 600;  /* Bold heading */
   }
 
   .txt-content p {
-      font-size: 14px;  /* Further reduce paragraph font size */
+      font-size: 14px;  /* Reduce paragraph font size */
       margin-left: 0;
-      text-align: center;
-      line-height: 1.6;
+      text-align: left;  /* Align the paragraph to the left */
+      line-height: 1.7;  /* Increase line height for better readability */
       margin-top: 10px;
   }
 
   .img-content {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;  /* Align images to the left */
       width: 100%;
       max-width: 100%;
       margin-top: 15px;

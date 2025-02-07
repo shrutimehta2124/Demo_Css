@@ -348,7 +348,7 @@ header {
 /* Main blue section */
 .blue-section {
   display: flex;
-    margin: 25rem,25rem;
+  margin: 25rem,25rem;
   flex-direction: row; /* Ensure left and right sections are side-by-side */
   flex-wrap: nowrap; /* Prevent wrapping, keep sections in a single line */
   background-image: url('images/line-background.png'); /* Set your background image */
@@ -382,7 +382,7 @@ header {
   transition: transform 0.3s ease; /* Transition for the hover effect */
   max-width: 50%; /* Ensure image doesn’t stretch too much */
   position: relative;
-  top: -90px; /* Slight adjustment upwards without overflowing */
+  top: -100px; /* Slight adjustment upwards without overflowing */
 }
 
 /* Hover effect on image */
