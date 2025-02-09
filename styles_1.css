@@ -865,7 +865,13 @@
                 padding: 0 5px; /* Reduce padding on smaller screens */
                 margin: 0; /* Remove margins */
               }
-            
+              .left {
+                width: 100%; /* Ensure the left section takes up full width */
+                display: flex;
+                flex-direction: column;
+              /*  justify-content: flex-start;  Align content to the top */
+               /* align-items: flex-start;  Ensure the image aligns to the top */
+              }
               .left img {
                 margin: 0;
                 object-fit: cover; /* Ensure the image covers the space, avoiding overflow */
