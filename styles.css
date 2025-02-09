@@ -286,6 +286,7 @@ header {
 
 .content-column {
   display: grid;
+  margin-left: 2%;
   align-items: center;
   gap: 2rem; /* Space between items */
 }
@@ -348,80 +349,93 @@ header {
 /* Main blue section */
 .blue-section {
   display: flex;
-  margin: 25rem,25rem;
   flex-direction: row; /* Ensure left and right sections are side-by-side */
   flex-wrap: nowrap; /* Prevent wrapping, keep sections in a single line */
   background-image: url('images/line-background.png'); /* Set your background image */
   background-size: cover; /* Ensure the image covers the whole div */
-  margin: 10px auto; /* Center the section horizontally with auto margins */
   background-color: #4F7EF7; /* Blue background */
-  height: 400px; /* Fixed height */
-  max-width: 100%; /* Set max-width to take full width of the container */
+  min-height: 50vh; /* Minimum height to be 50% of the viewport height */
+  height: auto; /* Allows the height to adjust based on content */
+  width: 90%; /* Set width to 90% of the container */
+  max-width: 1200px; /* Prevent it from expanding too wide */
+  margin: 7% auto; /* Center the section horizontally */
   border-radius: 24px; /* Rounded corners */
   color: white; /* White text */
-  justify-content: space-between; /* Distribute space evenly between left and right sections */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
   box-sizing: border-box; /* Include padding and borders in width/height calculations */
   gap: 20px; /* Gap between left and right sections */
-  padding: 0 20px; /* Padding inside the section */
+  padding: 20px; /* Padding inside the section */
+  position: relative;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Left side with background image */
+.blue-section:hover {
+  background-color: #3c6dd5; /* Slightly darker shade on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.blue-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* Semi-transparent overlay */
+  border-radius: 24px; /* Ensure it follows the section's rounded corners */
+  z-index: 1; /* Position it behind the content */
+}
+
 .left {
   flex: 1; /* Takes up equal space as the right section */
   display: flex;
   justify-content: center; /* Center the image horizontally */
- /* align-items: flex-start;  Align items to the top */
   position: relative; /* Allow positioning of child elements */
 }
 
-/* Styling for the image inside the left div */
 .left img {
-  margin-top: 50px;
+ /* margin-top: 40px; Reduce the top margin to center the image better */
   display: block; /* Ensures no extra space below the image */
   border-radius: 8px; /* Rounded corners for the image */
   transition: transform 0.3s ease; /* Transition for the hover effect */
-  max-width: 50%; /* Ensure image doesn’t stretch too much */
+  max-width: 70%; /* Ensure image doesn’t stretch too much */
+  height: auto; /* Maintain aspect ratio */
   position: relative;
-  top: -100px; /* Slight adjustment upwards without overflowing */
+  top: -100px; /* Adjust to prevent overflow */
 }
 
-/* Hover effect on image */
 .left img:hover {
-  transform: rotate(20deg); /* Rotate image on hover */
+  transform: rotate(20deg) scale(1.05); /* Rotate and zoom slightly on hover */
 }
 
-/* Right side for text content */
 .right {
   flex: 1; /* Takes up equal space as the left section */
   display: flex;
-  flex-direction: column; /* Stack text and button vertically */
-  justify-content: center; /* Align content to the top */
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
   align-items: flex-start; /* Align text and button to the left */
-  padding: 25px; /* Padding inside the right section */
+  text-align: left; /* Align text to the left */
+  padding: 30px; /* Increased padding inside the right section */
+  gap: 15px; /* Add spacing between the text elements */
 }
 
-/* Heading for the right section */
 .right h3 {
   font-family: 'Inter', sans-serif;
-  font-size: 36px; /* Reduced font size for better balance */
-  font-weight: 600;
+  font-size: 40px; /* Make heading slightly larger */
+  font-weight: 700; /* Increase the weight for a stronger emphasis */
   padding: 0; /* Remove padding from h3 */
   margin: 0 0 15px 0; /* Reduced bottom margin */
-  text-align: left; /* Align text to the left */
-  word-wrap: break-word; /* Break words to prevent overflow */
   line-height: 1.4; /* Added line height for readability */
 }
 
-/* Paragraph for the offer details */
 .right p {
   font-family: 'Inter', sans-serif;
-  font-size: 20px; /* Reduced font size for better balance */
-  text-align: left; /* Align text to the left */
-  margin: 0 0 15px 0; /* Add margin below the paragraph */
-  line-height: 1.6; /* Adjusted line height for better readability */
+  font-size: 22px; /* Slightly larger paragraph text */
+  margin: 0 0 20px 0; /* Add margin below the paragraph */
+  line-height: 1.8; /* Adjusted line height for better readability */
 }
 
-/* Button styles */
 .right button {
   padding: 12px 24px; /* Button padding */
   border-radius: 5px;
@@ -431,11 +445,30 @@ header {
   border: none; /* Remove default button border */
   font-size: 16px; /* Set a font size for the button */
   font-weight: 500; /* Set font weight for the button */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
-/* Button hover effect */
 .right button:hover {
   background-color: lightgray; /* Light gray background on hover */
+}
+
+.right button:focus {
+  outline: 3px solid #4F7EF7; /* Highlight with blue outline */
+  outline-offset: 2px;
+}
+
+/* Add fade-in-up animation for text elements */
+.right h3, .right p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*new section */

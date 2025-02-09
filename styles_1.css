@@ -81,28 +81,30 @@
       animation-duration: 10s; /* Faster scrolling on medium screens */
     }
         /*new section*/  
-        .content-grid {
-          grid-template-columns: repeat(2, 1fr); /* Maintain 2-column layout for medium screens */
-        }
-      
-        .content-item {
-          flex: 1; /* Allow items to shrink and take up available space */
-          padding: 10px; /* Slightly reduced padding */
-        }
-      
-        .text-content h4 {
-          font-size: 1.1rem; /* Adjust font size for medium screens */
-        }
-      
-        .text-content p {
-          font-size: 0.85rem; /* Slightly smaller text */
-        }
-        /* Adjusting image responsiveness */
-        .feature-image {
-          max-width: 100%;
-          height: auto;
+        @media (max-width: 991px) {
+          .content-grid {
+            grid-template-columns: 1fr; /* Switch to single column layout */
+          }
+        
+          .content-item {
+            padding: 15px; /* Adjust padding */
+          }
+        
+          .text-content h4 {
+            font-size: 1.2rem; /* Larger font for mobile */
+          }
+        
+          .text-content p {
+            font-size: 1rem; /* Larger paragraph text */
+          }
+        
+          .feature-image {
+            max-width: 50%;
+         margin-left: 20%;
           margin-top: 20px;
+          }
         }
+        
       /*New Section */
       .more-feature-contain {
           flex-direction: column; /* Stack items vertically for tablet */
@@ -130,8 +132,8 @@
         .feature-image-1 {
           margin-top: 5rem; /* Move the image below the text */
           height: auto;
-          max-width: 45%;
-          margin-left: 20%;
+          max-width: 50%;
+         margin-left: 20%;
         }
         h4 {
           font-size: 1.35rem;
@@ -272,7 +274,7 @@
           .input-wrapper svg {
             width: 16px;  /* Adjust SVG size for smaller screens */
             height: 16px; /* Adjust SVG size for smaller screens */
-            right: -50px;  /* Reduce space from the right side for smaller screens */
+           /* right: -50px;   Reduce space from the right side for smaller screens */
           }
         
 }
@@ -377,7 +379,7 @@
         .feature-image {
           max-width: 60%;
           height: auto;
-           margin-left: 20%;
+           /*margin-left: 20%;*/
           margin-top: 20px;
         }
 
